@@ -1,0 +1,108 @@
+/* Vendor */
+@import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono&display=swap");
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #bada55;
+}
+
+h2 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #bada55;
+}
+
+h3 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #bada55;
+}
+
+h4 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #bada55;
+}
+
+h5 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #bada55;
+}
+
+h6 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #bada55;
+}
+
+/* Layout */
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.center, .social {
+  text-align: center;
+}
+
+header {
+  height: 150px;
+  line-height: 70px;
+  border-bottom: #bada55 solid 8px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 120px;
+  border-top: #bada55 solid 8px;
+}
+
+/* Components */
+.social {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.social-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #bada55;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  margin: 0 5px;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.social-link:hover i {
+  text-shadow: black 3px 3px 3px;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}

@@ -1,0 +1,12 @@
+body {
+    background-color: color(bg);
+    color: color(txt);
+    font-family: $font-base;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-family: $font-heading;
+        color: color(accent);
+    }
+}

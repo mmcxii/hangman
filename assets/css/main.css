@@ -69,11 +69,6 @@ header {
   border-bottom: #bada55 solid 8px;
 }
 
-main {
-  margin: 150px auto;
-  top: 0;
-}
-
 footer {
   position: absolute;
   bottom: 0;

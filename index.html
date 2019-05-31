@@ -8,6 +8,10 @@
 
         <link
             rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-grid.min.css"
+        />
+        <link
+            rel="stylesheet"
             href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF"
             crossorigin="anonymous"
@@ -22,29 +26,85 @@
             </div>
         </header>
         <main>
-            <div class="middle">
-                <div id="app">
-                    <div class="row">
-                        <span id="answer">Answer goes here</span>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <img src="" alt="" id="answer-pic" />
-                        </div>
-                        <div class="col">
-                            <section id="directions">
-                                Press any key to begin.
-                            </section>
-                            <section id="win-count">
-                                Wins:
-                            </section>
+            <div id="main-content">
+                <div class="middle">
+                    <div id="app">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 center">
+                                    <span id="answer">Answer Goes Here</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-custom">
+                                    <img id="answer-pic" />
+                                </div>
+                                <div class="col-md-6 col-custom">
+                                    <div class="row row-custom">
+                                        <div class="col-md-12 center">
+                                            <span id="instructions">
+                                                Guess your first letter to begin.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <span id="wins">
+                                                Wins:
+                                                <br />
+                                                <span id="win-counter">
+                                                    0
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <span id="current-word">
+                                                Current Word:
+                                                <br />
+                                                <span id="current-word-field">
+                                                    _ _ _ _ _ _
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <span id="guesses-remaining">
+                                                Number of Guesses Remaining:
+                                                <br />
+                                                <span id="num-guesses">
+                                                    15
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <span id="used-letters">
+                                                Letters Already Guessed:
+                                                <br />
+                                                <span id="used-letters">
+                                                    A E I O U
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
         <footer>
-            <div class="middle">
+            <div class="middle center">
                 Nich Secord &copy;2019
                 <div class="social">
                     <a href="https://www.github.com/mmcxii" target="new" class="social-link">

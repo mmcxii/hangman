@@ -1,29 +1,11 @@
-.container {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
 .middle {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .center {
     text-align: center;
-}
-
-.row {
-    display: flex;
-    width: 100%;
-}
-
-.col {
-    display: flex;
-    flex-basis: 1;
-    border: 2px solid color(txt);
-    height: $app-size * 0.9;
-    width: 50%;
-    margin: auto 0;
 }

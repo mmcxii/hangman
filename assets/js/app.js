@@ -1,5 +1,4 @@
 // Section 0: Variables //
-
 let current;
 let answer;
 let hint;
@@ -49,7 +48,6 @@ const numGuessesField = document.getElementById('num-guesses-field');
 const usedLettersField = document.getElementById('used-letters-field');
 
 // Section 1: Initialize Document //
-
 current = answers[r(0, answers.length)];
 answer = current.name;
 hint = current.hint;
@@ -61,7 +59,6 @@ numGuessesField.innerHTML = numGuesses;
 winCounterField.innerHTML = winCounter;
 
 // Section X: Functions //
-
 // Listen for Keyboard events
 let addFunctionHere;
 

@@ -70,11 +70,8 @@ function maskAnswer() {
         maskedAnswer.setAttribute('id', 'current');
         letter = document.createElement('li');
         letter.setAttribute('class', 'letter');
-        if (answer[i] === ' ') {
-            maskedAnswer.innerHTML = ' ';
-        } else {
-            letter.innerHTML = '_';
-        }
+
+        letter.innerHTML = '_';
 
         currentWordField.appendChild(maskedAnswer);
         maskedAnswer.appendChild(letter);

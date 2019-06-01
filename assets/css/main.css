@@ -111,6 +111,17 @@ footer {
   max-height: 930px;
 }
 
+#current {
+  display: block;
+}
+
+#current li {
+  position: relative;
+  list-style: none;
+  display: inline;
+  margin: 0 2px;
+}
+
 .social {
   margin: 10px auto;
   width: 100%;

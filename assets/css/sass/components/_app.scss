@@ -33,3 +33,14 @@
     min-height: 450px;
     max-height: 930px;
 }
+
+#current {
+    display: block;
+
+    li {
+        position: relative;
+        list-style: none;
+        display: inline;
+        margin: 0 2px;
+    }
+}

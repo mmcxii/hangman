@@ -90,14 +90,14 @@ footer {
   height: 50px;
   line-height: 50px;
   font-size: 25px;
+  letter-spacing: 5px;
   margin: 0 auto;
+  text-transform: capitalize;
 }
 
 #answer-pic {
-  width: 100%;
-  height: 100px;
+  max-width: 100%;
   border-radius: 10px;
-  border: 1px solid #fff;
   margin-top: 20px;
 }
 
@@ -120,6 +120,11 @@ footer {
   list-style: none;
   display: inline;
   margin: 0 2px;
+  text-transform: uppercase;
+}
+
+#used-letters-field {
+  text-transform: uppercase;
 }
 
 .social {

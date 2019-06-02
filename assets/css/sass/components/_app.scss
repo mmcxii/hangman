@@ -13,14 +13,14 @@
         height: $size;
         line-height: $size;
         font-size: $size * 0.5;
+        letter-spacing: 5px;
         margin: 0 auto;
+        text-transform: capitalize;
     }
 
     &-pic {
-        width: 100%;
-        height: 100px;
+        max-width: 100%;
         border-radius: $rounded;
-        border: 1px solid color(txt);
         margin-top: 20px;
     }
 }
@@ -42,5 +42,10 @@
         list-style: none;
         display: inline;
         margin: 0 2px;
+        text-transform: uppercase;
     }
+}
+
+#used-letters-field {
+    text-transform: uppercase;
 }

@@ -9,3 +9,12 @@
 .center {
     text-align: center;
 }
+
+.row-custom {
+    margin-top: 20px;
+}
+.col-custom {
+    border: 1px solid color(txt);
+    min-height: 450px;
+    max-height: 930px;
+}

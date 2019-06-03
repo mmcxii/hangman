@@ -37,7 +37,26 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-custom">
-                                    <img id="answer-pic" />
+                                    <div class="row row-custom">
+                                        <div class="col-md-12 center">
+                                            <span id="hint">
+                                                <button
+                                                    id="hint-button"
+                                                    class="btn-custom"
+                                                    onclick="showHint()"
+                                                >
+                                                    Want a Hint?
+                                                </button>
+                                                <br />
+                                                <span id="hint-field"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <img id="answer-pic" />
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-6 col-custom">
                                     <div class="row row-custom">
@@ -88,6 +107,17 @@
                                         </div>
                                     </div>
                                     <br />
+                                    <div class="row">
+                                        <div class="col-md-12 center">
+                                            <button
+                                                id="reset-button"
+                                                class="btn-custom"
+                                                onclick="reset()"
+                                            >
+                                                Reset
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

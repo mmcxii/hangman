@@ -1,5 +1,5 @@
 /* Vendor */
-@import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Dancing+Script&display=swap");
 /* Base */
 * {
   margin: 0;
@@ -20,33 +20,33 @@ body {
 }
 
 h1 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #bada55;
+  font-family: "Dancing Script", cursive;
+  color: #aa1f2a;
 }
 
 h2 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #bada55;
+  font-family: "Dancing Script", cursive;
+  color: #aa1f2a;
 }
 
 h3 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #bada55;
+  font-family: "Dancing Script", cursive;
+  color: #aa1f2a;
 }
 
 h4 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #bada55;
+  font-family: "Dancing Script", cursive;
+  color: #aa1f2a;
 }
 
 h5 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #bada55;
+  font-family: "Dancing Script", cursive;
+  color: #aa1f2a;
 }
 
 h6 {
-  font-family: "Ubuntu Mono", monospace;
-  color: #bada55;
+  font-family: "Dancing Script", cursive;
+  color: #aa1f2a;
 }
 
 /* Layout */
@@ -63,10 +63,20 @@ h6 {
   text-align: center;
 }
 
+.row-custom {
+  margin-top: 20px;
+}
+
+.col-custom {
+  border: 1px solid #fff;
+  min-height: 450px;
+  max-height: 930px;
+}
+
 header {
   height: 150px;
   line-height: 70px;
-  border-bottom: #bada55 solid 8px;
+  border-bottom: #aa1f2a solid 8px;
 }
 
 footer {
@@ -74,7 +84,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 150px;
-  border-top: #bada55 solid 8px;
+  border-top: #aa1f2a solid 8px;
 }
 
 /* Components */
@@ -99,16 +109,6 @@ footer {
   max-width: 100%;
   border-radius: 10px;
   margin-top: 20px;
-}
-
-.row-custom {
-  margin-top: 20px;
-}
-
-.col-custom {
-  border: 1px solid #fff;
-  min-height: 450px;
-  max-height: 930px;
 }
 
 #current {
@@ -136,7 +136,7 @@ footer {
   display: inline-block;
   text-decoration: none;
   color: #fff;
-  background-color: #bada55;
+  background-color: #aa1f2a;
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -151,4 +151,22 @@ footer {
   text-shadow: black 3px 3px 3px;
   -webkit-transition: ease-in-out 300ms;
   transition: ease-in-out 300ms;
+}
+
+.btn-custom {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #aa1f2a;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: inherit;
+  cursor: pointer;
+  -webkit-transition: ease-in-out 300ms;
+  transition: ease-in-out 300ms;
+}
+
+.btn-custom:hover, .btn-custom:active, .btn-custom:focus {
+  color: #aa1f2a;
+  -webkit-transition: ease-in-out 200ms;
+  transition: ease-in-out 200ms;
 }

@@ -6,14 +6,14 @@ $breakpoints: (
 );
 
 $colors: (
-    accent: #bada55,
+    accent: lighten(#7f171f, 10),
     bg: #333,
     txt: #fff,
 );
 
 //Fonts
 $font-base: 'Raleway', sans-serif;
-$font-heading: 'Ubuntu Mono', monospace;
+$font-heading: 'Dancing Script', cursive;
 
 // Styling
 $rounded: 10px; // Uniform border radius value

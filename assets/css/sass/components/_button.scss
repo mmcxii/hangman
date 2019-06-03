@@ -1,0 +1,17 @@
+.btn-custom {
+    background-color: color(bg);
+    color: color(txt);
+    border: 1px solid color(accent);
+    border-radius: $rounded;
+    padding: 8px 16px;
+    font-size: inherit;
+    cursor: pointer;
+    transition: ease-in-out 300ms;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: color(accent);
+        transition: ease-in-out 200ms;
+    }
+}

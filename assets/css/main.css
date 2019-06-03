@@ -89,10 +89,8 @@ footer {
 
 /* Components */
 #app {
-  border: 5px solid #fff;
   border-radius: 10px;
-  max-height: 1000px;
-  width: 500px;
+  max-height: calc(100vh - (150px * 2));
   margin: auto;
 }
 

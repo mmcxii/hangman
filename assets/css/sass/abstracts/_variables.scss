@@ -18,4 +18,4 @@ $font-heading: 'Dancing Script', cursive;
 // Styling
 $rounded: 10px; // Uniform border radius value
 $header-footer-size: 150px;
-$app-size: 1000px;
+$app-size: calc(100vh - (150px * 2));

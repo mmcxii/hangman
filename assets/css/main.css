@@ -110,11 +110,13 @@ footer {
   margin-top: 20px;
 }
 
-#current {
+#current-word-field,
+#used-letters-field {
   display: block;
 }
 
-#current li {
+#current-word-field li,
+#used-letters-field li {
   position: relative;
   list-style: none;
   display: inline;

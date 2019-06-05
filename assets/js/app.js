@@ -149,7 +149,7 @@ function guessCheck(g) {
         for (let i = 0; i < answer.length; i++) {
             // Update page
             if (answer[i] === g) {
-                document.getElementById('current').children[i].innerHTML = g;
+                document.getElementById('current-word-field').children[i].innerHTML = g;
             }
         }
 
@@ -168,9 +168,14 @@ function guessCheck(g) {
         // If the guess is incorrect...
     } else {
         if (!usedLetters.includes(g)) {
-            // Update page
             usedLetters.push(g);
-            usedLettersField.innerHTML = usedLetters;
+
+            // Update page
+            const letter = document.createElement('li');
+            letter.setAttribute('class', 'letter');
+            letter.innerHTML = g;
+
+            usedLettersField.appendChild(letter);
 
             // Decriment remaining guesses
             if (numGuesses > 1) {
@@ -187,16 +192,15 @@ function guessCheck(g) {
 
 // Create Masked Answer
 function maskAnswer() {
-    const maskedAnswer = document.createElement('ul');
-    maskedAnswer.setAttribute('id', 'current');
+    // const maskedAnswer = document.createElement('ul');
+    // maskedAnswer.setAttribute('id', 'current');
 
     for (let i = 0; i < answer.length; i++) {
         const letter = document.createElement('li');
         letter.setAttribute('class', 'letter');
         letter.innerHTML = '_';
 
-        currentWordField.appendChild(maskedAnswer);
-        maskedAnswer.appendChild(letter);
+        currentWordField.appendChild(letter);
     }
 }
 

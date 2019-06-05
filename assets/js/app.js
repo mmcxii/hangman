@@ -1,6 +1,7 @@
 // Section 0: Variables //
 let answer;
 let current;
+let gameOver;
 let hint;
 let numGuesses;
 let prevAnswer;
@@ -80,6 +81,7 @@ function initialSet() {
     numGuesses = Math.round(remaining * 1.5); // Gives more guesses for long words, and fewer guesses for short words
     usedLetters = [];
     usedCorrect = [];
+    gameOver = false;
 
     // Hide aanswer
     maskAnswer();
@@ -116,6 +118,13 @@ function reset() {
     remaining = answer.length;
     numGuesses = Math.round(remaining * 1.5);
     answerPic.removeAttribute('src');
+
+    // Resets win counter if the game is over
+    if (gameOver) {
+        gameOver = false;
+        winCounter = 0;
+        winCounterField.innerHTML = winCounter;
+    }
 
     // Reset HTML
     numGuessesField.innerHTML = numGuesses;
@@ -204,10 +213,10 @@ function loserScreen() {
     answerField.innerHTML = answer;
     hintField.innerHTML = hint;
     answerPic.setAttribute('src', `assets/img/${answer}.jpg`);
+    gameOver = true;
 }
 
 // Generates Random Number
-//// Source MDN
 function r(max) {
     return Math.floor(Math.random() * max);
 }

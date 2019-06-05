@@ -1,12 +1,14 @@
 // Section 0: Variables //
-let current;
 let answer;
+let current;
 let hint;
-let winCounter;
 let numGuesses;
+let prevAnswer;
+let prevAnswer2;
 let remaining;
-let usedLetters;
 let usedCorrect;
+let usedLetters;
+let winCounter;
 
 const answers = [
     {
@@ -53,9 +55,6 @@ const winCounterField = document.getElementById('win-counter-field');
 
 // Section 1: Initialize Document //
 initialSet();
-
-// Log answer (for testing/ demonstration)
-console.log(answer);
 
 // Section 2: Functions //
 
@@ -113,7 +112,7 @@ window.addEventListener('keydown', function(e) {
 function initialSet() {
     // Initialize values
     winCounter = 0;
-    current = answers[r(0, answers.length)];
+    current = answers[r(answers.length)];
     answer = current.name;
     hint = current.hint;
     remaining = answer.length;
@@ -137,10 +136,19 @@ function showHint() {
 }
 
 function reset() {
+    // Ensures a different answer each time
+    prevAnswer2 = prevAnswer;
+    prevAnswer = current;
+    while (
+        answers.indexOf(prevAnswer) === answers.indexOf(current) ||
+        answers.indexOf(prevAnswer2) === answers.indexOf(current)
+    ) {
+        current = answers[r(answers.length)];
+    }
+
     // Reset values (not win counter)
     usedLetters = [];
     usedCorrect = [];
-    current = answers[r(0, answers.length)];
     answer = current.name;
     hint = current.hint;
     remaining = answer.length;
@@ -193,8 +201,6 @@ function loserScreen() {
 
 // Generates Random Number
 //// Source MDN
-function r(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
+function r(max) {
+    return Math.floor(Math.random() * max);
 }

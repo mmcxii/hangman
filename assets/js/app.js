@@ -54,19 +54,7 @@ const resetButton = document.getElementById('reset-button');
 const usedLettersField = document.getElementById('used-letters-field');
 const winCounterField = document.getElementById('win-counter-field');
 
-// Section 1: App //
-initialSet();
-
-// Listen for Keyboard events
-window.addEventListener('keydown', function(e) {
-    // Limit actions to letters of the alphabet
-    if (e.keyCode >= 65 && e.keyCode <= 90) {
-        const guess = e.key;
-        guessCheck(guess);
-    }
-});
-
-// Section 2: Functions //
+// Section 1: Functions //
 // Main Functions
 
 // Initialize game
@@ -229,3 +217,15 @@ function loserScreen() {
 function r(max) {
     return Math.floor(Math.random() * max);
 }
+
+// Section 2: Call Functions //
+initialSet();
+
+// Listen for Keyboard events
+window.addEventListener('keydown', function(e) {
+    // Limit actions to letters of the alphabet
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
+        const guess = e.key;
+        guessCheck(guess);
+    }
+});

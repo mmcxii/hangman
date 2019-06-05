@@ -51,6 +51,7 @@ const answerPic = document.getElementById('answer-pic');
 const currentWordField = document.getElementById('current-word-field');
 const hintField = document.getElementById('hint-field');
 const numGuessesField = document.getElementById('num-guesses-field');
+const resetButton = document.getElementById('reset-button');
 const usedLettersField = document.getElementById('used-letters-field');
 const winCounterField = document.getElementById('win-counter-field');
 
@@ -124,6 +125,7 @@ function reset() {
         gameOver = false;
         winCounter = 0;
         winCounterField.innerHTML = winCounter;
+        resetButton.innerHTML = 'Reset';
     }
 
     // Reset HTML
@@ -209,11 +211,17 @@ function victoryScreen() {
 
 // Displays information on loss
 function loserScreen() {
+    gameOver = true;
+
     numGuessesField.innerHTML = 'You Lose! Very Sad!';
     answerField.innerHTML = answer;
     hintField.innerHTML = hint;
+    resetButton.innerHTML = 'Click to Play Again!';
     answerPic.setAttribute('src', `assets/img/${answer}.jpg`);
-    gameOver = true;
+
+    for (let i = 0; i < answer.length; i++) {
+        document.getElementById('current').children[i].innerHTML = answer[i];
+    }
 }
 
 // Generates Random Number

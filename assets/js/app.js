@@ -140,9 +140,6 @@ function reset() {
     // Reset values (not win counter)
     usedLetters = [];
     usedCorrect = [];
-    currentWordField.innerHTML = '';
-    hintField.innerHTML = '';
-    answerField.innerHTML = 'Next Question!';
     current = answers[r(0, answers.length)];
     answer = current.name;
     hint = current.hint;
@@ -150,12 +147,15 @@ function reset() {
     numGuesses = Math.round(remaining * 1.5);
     answerPic.removeAttribute('src');
 
-    // Hide new answer
-    maskAnswer();
-
     // Reset HTML
     numGuessesField.innerHTML = numGuesses;
     usedLettersField.innerHTML = usedLetters;
+    currentWordField.innerHTML = '';
+    hintField.innerHTML = '';
+    answerField.innerHTML = 'Next Question!';
+
+    // Hide new answer
+    maskAnswer();
 }
 
 // Background Functions
@@ -180,7 +180,7 @@ function victoryScreen() {
     winCounterField.innerHTML = winCounter;
     answerField.innerHTML = answer;
     hintField.innerHTML = hint;
-    answerPic.setAttribute('src', `/assets/img/${answer}.jpg`);
+    answerPic.setAttribute('src', `./assets/img/${answer}.jpg`);
 }
 
 // Displays information on loss
@@ -188,7 +188,7 @@ function loserScreen() {
     numGuessesField.innerHTML = 'You Lose! Very Sad!';
     answerField.innerHTML = answer;
     hintField.innerHTML = hint;
-    answerPic.setAttribute('src', `/assets/img/${answer}.jpg`);
+    answerPic.setAttribute('src', `./assets/img/${answer}.jpg`);
 }
 
 // Generates Random Number

@@ -221,7 +221,7 @@ function loserScreen() {
     answerPic.setAttribute('src', `assets/img/${answer}.jpg`);
 
     for (let i = 0; i < answer.length; i++) {
-        document.getElementById('current').children[i].innerHTML = answer[i];
+        document.getElementById('current-word-field').children[i].innerHTML = answer[i];
     }
 }
 

@@ -180,7 +180,7 @@ function victoryScreen() {
     winCounterField.innerHTML = winCounter;
     answerField.innerHTML = answer;
     hintField.innerHTML = hint;
-    answerPic.setAttribute('src', `./assets/img/${answer}.jpg`);
+    answerPic.setAttribute('src', `assets/img/${answer}.jpg`);
 }
 
 // Displays information on loss
@@ -188,7 +188,7 @@ function loserScreen() {
     numGuessesField.innerHTML = 'You Lose! Very Sad!';
     answerField.innerHTML = answer;
     hintField.innerHTML = hint;
-    answerPic.setAttribute('src', `./assets/img/${answer}.jpg`);
+    answerPic.setAttribute('src', `assets/img/${answer}.jpg`);
 }
 
 // Generates Random Number

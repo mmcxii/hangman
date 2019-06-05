@@ -1,15 +1,14 @@
 // Section 0: Variables //
-let answer;
-let current;
-let gameOver;
-let hint;
-let numGuesses;
-let prevAnswer;
-let prevAnswer2;
-let remaining;
-let usedCorrect;
-let usedLetters;
-let winCounter;
+let answer,
+    current,
+    gameOver,
+    hint,
+    numGuesses,
+    prevAnswer,
+    prevAnswer2,
+    remainingusedCorrect,
+    usedLetters,
+    winCounter;
 
 const answers = [
     {

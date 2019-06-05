@@ -53,60 +53,21 @@ const numGuessesField = document.getElementById('num-guesses-field');
 const usedLettersField = document.getElementById('used-letters-field');
 const winCounterField = document.getElementById('win-counter-field');
 
-// Section 1: Initialize Document //
+// Section 1: App //
 initialSet();
 
-// Section 2: Functions //
-
-// Main Functions
 // Listen for Keyboard events
 window.addEventListener('keydown', function(e) {
     // Limit actions to letters of the alphabet
     if (e.keyCode >= 65 && e.keyCode <= 90) {
         const guess = e.key;
-
-        // If the guess is correct...
-        if (answer.includes(guess)) {
-            // Reveals correct letter(s)
-            for (let i = 0; i < answer.length; i++) {
-                // Update page
-                if (answer[i] === guess) {
-                    document.getElementById('current').children[i].innerHTML = guess;
-                }
-            }
-
-            // Stores correct guesses, and decriments remaining letters by the number of occurences
-            // (only first time per letter)
-            if (!usedCorrect.includes(guess)) {
-                usedCorrect.push(guess);
-                remaining -= answer.split(guess).length - 1;
-            }
-
-            // Reveals picture, hint, and name when all letters are guessed
-            if (remaining === 0) {
-                victoryScreen();
-            }
-
-            // If the guess is incorrect...
-        } else {
-            if (!usedLetters.includes(guess)) {
-                // Update page
-                usedLetters.push(guess);
-                usedLettersField.innerHTML = usedLetters;
-
-                // Decriment remaining guesses
-                if (numGuesses > 1) {
-                    numGuesses--;
-                    numGuessesField.innerHTML = numGuesses;
-
-                    // If user is out of guesses end the game
-                } else {
-                    loserScreen();
-                }
-            }
-        }
+        guessCheck(guess);
     }
 });
+
+// Section 2: Functions //
+
+// Main Functions
 
 // Initialize game
 function initialSet() {
@@ -130,6 +91,7 @@ function initialSet() {
 }
 
 // On-Click Functions
+
 // Shows the hint
 function showHint() {
     hintField.innerHTML = hint;
@@ -167,6 +129,51 @@ function reset() {
 }
 
 // Background Functions
+
+// Check Guess
+function guessCheck(g) {
+    // If the guess is correct...
+    if (answer.includes(g)) {
+        // Reveals correct letter(s)
+        for (let i = 0; i < answer.length; i++) {
+            // Update page
+            if (answer[i] === g) {
+                document.getElementById('current').children[i].innerHTML = g;
+            }
+        }
+
+        // Stores correct guesses, and decriments remaining letters by the number of occurences
+        // (only first time per letter)
+        if (!usedCorrect.includes(g)) {
+            usedCorrect.push(g);
+            remaining -= answer.split(g).length - 1;
+        }
+
+        // Reveals picture, hint, and name when all letters are guessed
+        if (remaining === 0) {
+            victoryScreen();
+        }
+
+        // If the guess is incorrect...
+    } else {
+        if (!usedLetters.includes(g)) {
+            // Update page
+            usedLetters.push(g);
+            usedLettersField.innerHTML = usedLetters;
+
+            // Decriment remaining guesses
+            if (numGuesses > 1) {
+                numGuesses--;
+                numGuessesField.innerHTML = numGuesses;
+
+                // If user is out of guesses end the game
+            } else {
+                loserScreen();
+            }
+        }
+    }
+}
+
 // Create Masked Answer
 function maskAnswer() {
     const maskedAnswer = document.createElement('ul');

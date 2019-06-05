@@ -68,7 +68,6 @@ window.addEventListener('keydown', function(e) {
 });
 
 // Section 2: Functions //
-
 // Main Functions
 
 // Initialize game
@@ -90,7 +89,6 @@ function initialSet() {
     // Set HTML
     winCounterField.innerHTML = winCounter;
     numGuessesField.innerHTML = numGuesses;
-    usedLettersField.innerHTML = usedLetters;
 }
 
 // On-Click Functions
